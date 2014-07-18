@@ -1,0 +1,27 @@
+# Site settings
+title: procrastinative ninja
+email: sebastian@lurado.de
+description: "what I do, when I don't do, what I should do."
+baseurl: ""
+url: "http://procrastinative.ninja"
+github_username:  sebastianludwig
+highlighter: pygments
+
+timezone: Europe/Berlin
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+kramdown:
+  input: GFM
+
+
+# Frontmatter defaults
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: post
+    values:
+      layout: post
