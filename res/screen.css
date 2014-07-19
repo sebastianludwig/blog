@@ -522,7 +522,8 @@ footer a.cc:hover {
 footer a.cc:hover img.cc {
     opacity:1;
 }
-footer a:link {
+
+footer a:link, footer a:active, footer a:visited {
     color:#778;
 }
 

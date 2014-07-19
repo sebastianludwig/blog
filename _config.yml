@@ -11,9 +11,10 @@ timezone: Europe/Berlin
 # Build settings
 markdown: redcarpet
 permalink: pretty
+exclude: ['Gemfile', 'Gemfile.lock', 'TODO.txt', '*.psd']
 
 redcarpet:
-  extensions: ["tables", "autolink", "strikethrough", "superscript"]
+  extensions: ["smart", "tables", "autolink", "strikethrough", "superscript"]
 
 owner:
   name: Sebastian Ludwig
