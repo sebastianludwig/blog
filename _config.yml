@@ -9,12 +9,11 @@ highlighter: pygments
 timezone: Europe/Berlin
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 permalink: pretty
 
-kramdown:
-  input: GFM
-
+redcarpet:
+  extensions: ["tables", "autolink", "strikethrough", "superscript"]
 
 owner:
   name: Sebastian Ludwig
