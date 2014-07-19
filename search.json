@@ -5,6 +5,7 @@
     {
         "title": "{{ post.title | escape }}",
         "category": "{{ post.category }}",
+        "content": {{ post.content | strip_html | jsonify }},
         "url": "{{ post.url }}",
         "date": "{{ post.date }}",
         "shortdate": "{{ post.date | date: '%B %d, %Y' }}"

@@ -7,6 +7,7 @@
     $(document).ready(function() {
         $('.search-field').simpleJekyllSearch({
             jsonFile: '/search.json',
+            jsonFormat: 'title,category,content,desc,url,date,shortdate',
             searchResults: '.search-results',
             template: '<li><a href="{url}"><time datetime="{date}">{shortdate}</time> &mdash; {title}</a></li>',
             noResults: '<p>Nothing found.</p>'
