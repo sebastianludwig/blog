@@ -28,3 +28,11 @@ defaults:
       type: post
     values:
       layout: post
+
+gallerytag:
+    dir: media/images/galleries
+    url: /media/images/galleries
+    thumb_width: 136
+    thumb_height: 136
+    columns: 4
+

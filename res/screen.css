@@ -493,7 +493,12 @@ div.meta .item:first-child { margin-left:0; }
 div.meta .item a, div.meta a.item, div.meta .item a:hover,
 div.meta a.item:hover {
     color:inherit;
-} 
+}
+
+div.gallery dl.gallery-item {
+    float: left;
+    padding: 2px;
+}
 
 footer {
     font-size: small;

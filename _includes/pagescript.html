@@ -1,5 +1,7 @@
 <script src="/assets/js/jquery-1.10.2.js"></script>
-<script src="/assets/js/simpleJekyllSearch.js"></script>  
+<script src="/assets/js/simpleJekyllSearch.js"></script> 
+<script type="text/javascript" src="/assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
 
 <script type="text/javascript">
     /* Jekyll Simple Search option */
@@ -12,6 +14,8 @@
             template: '<li><a href="{url}"><time datetime="{date}">{shortdate}</time> &mdash; {title}</a></li>',
             noResults: '<p>Nothing found.</p>'
         });
+
+        $(".gallery-link").fancybox();
     });
 
     (function($, window, undefined) {
