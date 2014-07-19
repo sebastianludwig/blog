@@ -147,6 +147,10 @@ div.content:not(.sub) h1:first-child {
     margin-top:0; font-size:300%;
 }
 
+div.content p {
+    margin: 1em 0em;
+}
+
 div.content img, div.content iframe { display:block; max-width:100%; margin:1em 0; }
 div.content iframe { border:none; }
 div.content *[align=right] { margin:0 0 1em 1em; }
@@ -251,10 +255,9 @@ a.post-excerpt.photo:hover div.padded-content div.image {
     a.post-excerpt {
         position:relative;
         display: block;
-        width:50%; /* 680/2 */
+        width:100%;
         /*height:180px;*/
         overflow-y: hidden;
-        float:left;
         border:none;
         margin-bottom:10px;
         /*background:#eee;*/
@@ -320,7 +323,7 @@ div.post {
     /*margin-bottom:-70px;*/
     page-break-before: always;
 }
-div.post.single, div.post:last-child { border-bottom:none; }  
+div.post.single, div.post:last-child { border-bottom:none; } 
 
 div.post actions, div.post info {
     color: #ccc;
@@ -684,7 +687,7 @@ body.search-overlay:after {
 }
 .search-wrapper {
     width: 100%;
-    *zoom: 1;
+    zoom: 1;
 }
 
 .search-wrapper:before,.search-wrapper:after {

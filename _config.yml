@@ -1,10 +1,9 @@
 # Site settings
-title: procrastinative ninja
+title: Procrastinative Ninja
 email: sebastian@lurado.de
 description: "what I do, when I don't do, what I should do."
 baseurl: ""
 url: "http://procrastinative.ninja"
-github_username:  sebastianludwig
 highlighter: pygments
 
 timezone: Europe/Berlin
@@ -16,6 +15,11 @@ permalink: pretty
 kramdown:
   input: GFM
 
+
+owner:
+  name: Sebastian Ludwig
+  disqus_shortname: procrastinativeninja
+  github_username:  sebastianludwig
 
 # Frontmatter defaults
 defaults:
