@@ -160,6 +160,8 @@ div.content *[align=left] { margin:0 1em 1em 0; }
 div.content li { margin-left: 2em; margin-bottom:0.3em; }
 div.content ul > li { margin-left:1.4em; }
 
+div.content li > p { margin: 0em; }
+
 div.content blockquote {
     font-family: 'Poly', georgia;
     font-style:italic;
@@ -368,27 +370,34 @@ div.post iframe[width="640"] {
     zoom:0.87;
 }
 
-.post code { padding: 1px 5px; }
-
 .post ul,
 .post ol { margin-left: 1.35em; }
 
 /* code blocks */
 
+.post code {
+  font-size: smaller;
+  padding: 1px 4px;
+}
+
+.post .highlight pre, .post code {
+  font-family: monospace;
+  border: 1px solid #d5d5e9;
+  background-color: #eef;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
 .post .highlight pre code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
-  font-family: monospace;
+  font-size: 100%;
 }
 
 .post .highlight pre {
-  border: 1px solid #d5d5e9;
-  background-color: #eef;
   padding: 8px 12px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
   font-size: 12px;
   line-height: 14px;
   overflow:auto;
