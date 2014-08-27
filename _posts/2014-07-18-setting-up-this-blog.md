@@ -1,6 +1,6 @@
 ---
 title: Setting up this blog
-should_do: clean the kitchen
+actually_should: clean the kitchen
 ---
 
 well, here it goes. The foundation for me, writing about my procrastination projects: things I do, when I actually should do something else. Kind of meta procrastination .oO( Yo dawg... )

@@ -1,6 +1,6 @@
 ---
 title: TLC5947 via SPI on Raspberry Pi
-should_do: write my master thesis
+actually_should: write my master thesis
 ---
 
 It's been a huge pain in the ass. As part of my "Tetris in an IKEA shelf" project (more on that in another post) I need to control and fade 8 RGB LED strips independently from a Raspberry Pi. Adafruit advertises its [24 channel 12 bit PWM LED Driver](https://www.modmypi.com/adafruit-24-channel-12-bit-pwm-led-driver) to be perfectly suited for this purpose. Even 8 strips, 3 channels each, equals 24 channels in total --- matches exactly. So I got one. This part was easy.
