@@ -71,7 +71,7 @@ def i2cConfig():
     reg0_mask = 0b00000000000000000000111111111111 
     reg0_conf = 0b00000000000000000000100100000000
     if reg0 & reg0_mask != reg0_conf:
-        print("reg0 I2C configuration not correct. Updating.")
+        print("register 0 configuration of I2C 1 not correct. Updating.")
         reg0 = (reg0 & ~reg0_mask) | reg0_conf
         memory.seek(GPFSEL0)
         memory.write(reg0.to_bytes(4, byteorder='little'))
@@ -86,7 +86,7 @@ def i2cConfig():
     reg2_mask = 0b00111111000000000000000000000000 
     reg2_conf = 0b00100100000000000000000000000000
     if reg2 & reg2_mask != reg2_conf:
-        print("reg2 I2C configuration not correct. Updating.")
+        print("register 2 configuration of I2C 0 not correct. Updating.")
         reg2 = (reg2 & ~reg2_mask) | reg2_conf
         memory.seek(GPFSEL2)
         memory.write(reg2.to_bytes(4, byteorder="little"))
