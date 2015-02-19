@@ -30,7 +30,7 @@ wget http://ftp.de.debian.org/debian/pool/main/i/i2c-tools/i2c-tools_3.1.0.orig.
 tar xf i2c-tools_3.1.0.orig.tar.bz2
 cd i2c-tools-3.1.0/py-smbus
 mv smbusmodule.c smbusmodule.c.orig  # backup
-wget https://gist.githubusercontent.com/sebastianludwig/c648a9e06c0dc2264fbd/raw/f4e5c3eb0ea768f30c9d7c5aa6961331dab7228a/smbusmodule.c 	# download patched (Python 3) source
+wget https://gist.githubusercontent.com/sebastianludwig/c648a9e06c0dc2264fbd/raw/2b74f9e72bbdffe298ce02214be8ea1c20aa290f/smbusmodule.c 	# download patched (Python 3) source
 ```
 
 The next steps need to be run with Python 3.4. For me, this meant activating a virtual environment ([see previous post]({% post_url 2014-07-20-install-python34-on-raspberry-pi %})) - as root.
