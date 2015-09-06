@@ -38,7 +38,7 @@ The next steps need to be run with Python 3.4. For me, this meant activating a v
 ```bash
 sudo bash
 source /home/pi/.virtualenvs/python34/bin/activate
-python --Version 		# should output 'Python 3.4.1'
+python --version 		# should output 'Python 3.4.1'
 
 python setup.py build
 python setup.py install
