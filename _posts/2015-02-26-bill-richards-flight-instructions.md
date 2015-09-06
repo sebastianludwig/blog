@@ -14,4 +14,4 @@ The second one mentions
 
 I was hooked and wanted to follow up, but these flight instructions weren't easy to find. The first clue was that [Bill's name is actually William](http://www.bpru.org/cancer-studies/about-usBill.html). And second, the document's title isn't actually "flight instructions". But [a list of his publications](https://www.erowid.org/culture/characters/richards_bill/richards_bill.shtml) contains _"Navigation within Consciousness: Insights from Four Decades of Psychotherapy Research with Imagery, Music and Entheogens"_. And, sure enough, here you go:
 
-[William Bill Richards - Flight Instructions (PDF)](/data/SensationSuit.pdf)
+[William Bill Richards - Flight Instructions (PDF)](/data/William Bill Richards - Flight Instructions.pdf)
