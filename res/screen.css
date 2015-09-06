@@ -394,6 +394,7 @@ div.post iframe[width="640"] {
   padding-right: 0;
   padding-left: 0;
   font-size: 100%;
+  line-height: 1.2;
 }
 
 .post .highlight pre {
