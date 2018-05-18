@@ -27,13 +27,13 @@ module Jekyll
 
 
 		def render(context)
-
+            bock_content = super
 			@config = context.registers[:site].config['gallerytag']
 			columns = (@config['columns'] != nil) ? @config['columns'] : 4
 			width = (@config['thumb_width'] != nil) ? @config['thumb_width'] : 150
 			height = (@config['thumb_height'] != nil) ? @config['thumb_height'] : 150
 			custom_attribute_name = (@config['custom_attribute_name'] != nil) ? @config['custom_attribute_name'] : 'rel'
-			images = gallery_images(context)
+			images = gallery_images(bock_content)
 
 			images_html = ""
 			images_html << "<ul class=\"gallery-list\">\n" if columns <= 0 
@@ -81,8 +81,8 @@ module Jekyll
             return img_html
         end
 
-		def gallery_images(context)
-			input_data = block_contents(context)
+		def gallery_images(bock_content)
+			input_data = block_contents(bock_content)
 			source_dir = @config['source_dir'] != nil ? @config['source_dir'].sub(/^\//, '') : (@config['url'] != nil ? @config['url'].sub(/^\//, '') : "images/thumbs");
 			gallery_data = []
 			input_data.each do |item|
@@ -136,11 +136,8 @@ module Jekyll
             return hsh
         end
 
-		def block_contents(context)
-			text = @nodelist[0].strip!
-			if (text == nil || text.length == 0) && @nodelist[1] != nil # check if we have a variable in the nodelist
-    			text = @nodelist[1].render(context)  # render the variable
-	        end
+		def block_contents(content)
+			text = content.strip!
 			lines = text.split(/\n/).map {|x| x.strip }.reject {|x| x.empty? }
 			lines = lines.map { |line|
 				line.split(/\s*::\s*/).map(&:strip)
