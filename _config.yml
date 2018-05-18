@@ -26,7 +26,7 @@ defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-      type: post
+      type: posts
     values:
       layout: post
 
@@ -36,4 +36,4 @@ gallerytag:
     thumb_width: 136
     thumb_height: 136
     columns: 4
-
+    magick_lib: mini
