@@ -3,7 +3,7 @@ title: TLC5947 via SPI on Raspberry Pi
 actually_should: write my master thesis
 ---
 
-It's been a huge pain in the ass. As part of my "Tetris in an IKEA shelf" project (more on that in another post) I need to control and fade 8 RGB LED strips independently from a Raspberry Pi. Adafruit advertises its [24 channel 12 bit PWM LED Driver](https://www.modmypi.com/adafruit-24-channel-12-bit-pwm-led-driver) to be perfectly suited for this purpose. Even 8 strips, 3 channels each, equals 24 channels in total --- matches exactly. So I got one. This part was easy.
+It's been a huge pain in the ass. As part of my "Tetris in an IKEA shelf" project (more on that in another post) I need to control and fade 8 RGB LED strips independently from a Raspberry Pi. Adafruit advertises its [24 channel 12 bit PWM LED Driver](http://www.modmypi.com/raspberry-pi/breakout-boards/adafruit/adafruit-24-channel-12-bit-pwm-led-driver-spi/) to be perfectly suited for this purpose. Even 8 strips, 3 channels each, equals 24 channels in total --- matches exactly. So I got one. This part was easy.
 
 Using the SPI bus on the Raspberry doesn't seem to be the most common thing to do. Information is sparse. It's a lot more common on the Arduino where the protocol is [bit banged](http://en.wikipedia.org/wiki/Bit_banging). On the Pi, which has SPI support built in, people seem to use [one](https://github.com/lthiery/SPI-Py) of [few](https://github.com/doceme/py-spidev/) thin C drivers with python bindings --- years old, plenty times [forked, fixed, improved, just not ever merged](https://github.com/doceme/py-spidev/network). I ended up using the [BCM2835 C library](http://www.airspayce.com/mikem/bcm2835/) by Mike McCauley and looked at [FPulse](https://github.com/wrobell/fpulse/blob/master/fpulse/driver/tlc5947.py) how to use it from Python.
 
@@ -22,3 +22,7 @@ I couldn't believe that this is the way the chip is supposed to work but then I 
 Works as designed. Screw this, the TLC5947 board is going into the bin, I'll use two [PCA9685 boards](https://www.modmypi.com/adafruit-16-channel-12-bit-pwm-servo-driver).
 
 P.S. Luckily I can use these findings for my master theses ;-)
+
+## Edit
+
+Ulrich Stern has been able to achieve flicker free results with the TLC59711 and put together a [library](https://github.com/ulrichstern/Tlc59711) to use it properly. Check it out, if you're looking for an alternative.

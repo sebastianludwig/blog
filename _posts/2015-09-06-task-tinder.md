@@ -14,7 +14,7 @@ Unsure where to start, you draw a diagram
 
 ![Write->Exercise->Beer->Write](/media/images/task_tinder_1.png)
 
-Rearranged it's just a circle and it becomes obvious that it doesn't matter where you start (ignoring any other factors like gym opening hours and blogging dunk). 
+Rearranged it's just a circle and it becomes obvious that it doesn't matter where you start (ignoring any other factors like gym opening hours and blogging drunk). 
 
 ![Write->Exercise->Beer->Write](/media/images/task_tinder_2.png)
 
