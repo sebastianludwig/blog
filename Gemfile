@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll', '~>2.1'
-gem 'rmagick', '2.13.2'
+gem "jekyll"
+gem "mini_magick"
+gem "redcarpet"
+gem "pygments.rb"
