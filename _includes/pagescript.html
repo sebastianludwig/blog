@@ -4,6 +4,11 @@
 
 
 <script type="text/javascript">
+    /* Header Anchors */
+    $('h1,h2,h3,h4,h5,h6').filter('[id]').each(function () {
+        $(this).wrap('<a name="'+$(this).attr('id')+'"></a>');
+    });
+
     /* Jekyll Simple Search option */
 
     $(document).ready(function() {

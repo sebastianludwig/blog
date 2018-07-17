@@ -14,7 +14,7 @@ permalink: pretty
 exclude: ['Gemfile', 'Gemfile.lock', 'TODO.txt', '*.psd']
 
 redcarpet:
-  extensions: ["smart", "tables", "autolink", "strikethrough", "superscript"]
+  extensions: ["smart", "tables", "autolink", "strikethrough", "superscript", "with_toc_data"]
 
 owner:
   name: Sebastian Ludwig
