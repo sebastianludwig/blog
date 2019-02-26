@@ -53,7 +53,7 @@ Setting a breakpoint at -[UILabel setBackgroundColor:] with condition (void*)(id
 Breakpoint 3: where = UIKit`-[UILabel setBackgroundColor:], address = 0x0000000109a9cc98
 ```
 
-Note:  Stuff in backticks is evalueted before the rest of the expression. Here it returns the memory address of the label.
+Note:  Stuff in backticks is evaluated before the rest of the expression. Here it returns the memory address of the label.
 
 Next, let's hit continue and see what happens. Sure enough the breakpoint is triggered - time to poke around a little bit:
 
@@ -167,7 +167,7 @@ Scorolling around below line 307, there is
 Jackpot! 💪
 
 
-# The Soloution
+# The Solution
 
 A quick recap: Named colors can be specified by trait. When presenting a view controller, first `viewWillAppear:` is called, then `traitCollectionDidChange:`, then the trait collection specific storyboard properties are applied. That's why any code changes done in the first two methods have no effect. However `viewDidLayoutSubviews` is called after that. A simple implementation turns all three buttons green:
 
