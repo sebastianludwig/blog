@@ -16,14 +16,14 @@ For a while now I bake my own sourdogh bread. Not for health reasons or to be pr
 ### Day 1
 
 1. Starter
-	- 80g water
-	- 80g flour
-	- 100g sourdough
+  - 80g water
+  - 80g flour
+  - 100g sourdough
 2. Wait 2h
 3. Mix dough
-	- 400g flour
-	- 325g water
-	- 12g salt
+  - 400g flour
+  - 325g water
+  - 12g salt
 4. Wait 1-4h
 5. Fold 1
 6. Wait 30min
@@ -42,17 +42,17 @@ For a while now I bake my own sourdogh bread. Not for health reasons or to be pr
 6. Fold 3
 7. Wait 1.5-2.5h
 8. Preheat oven with baking pan (and lid) to 260ºC
-	- Use an extra small bowl with water, if you don't use a lid
+  - Use an extra small bowl with water, if you don't use a lid
 9. Assemble
-	- Spray hot baking pan with baking spray
-	- Pour dough into the baking pan
-	- Cut the surface
-	- Spray with water
-	- Lightly flour
-	- (Spray lid with water)
+  - Spray hot baking pan with baking spray
+  - Pour dough into the baking pan
+  - Cut the surface
+  - Spray with water
+  - Lightly flour
+  - (Spray lid with water)
 10. Bake
-	- ~35min at 260ºC (with lid)
-	- ~10min at 230ºC (without lid) until nicely colored
+  - ~35min at 260ºC (with lid)
+  - ~10min at 230ºC (without lid) until nicely colored
 11. Let rest for 1h before cutting
 
 ## Illustrated Guide

@@ -24,13 +24,13 @@ Depends: libc6 (>= 2.13-28), python2.7 | python2.6, python (>= 2.6), python (<< 
 The solution was actually pretty easy and described in the [official Raspberry Pi forum](http://www.raspberrypi.org/forums/viewtopic.php?f=32&t=22348).
 
 ```bash
-sudo apt-get install libi2c-dev 	# install dependency
+sudo apt-get install libi2c-dev   # install dependency
 
-wget http://ftp.de.debian.org/debian/pool/main/i/i2c-tools/i2c-tools_3.1.0.orig.tar.bz2 	# download i2c-tools source
+wget http://ftp.de.debian.org/debian/pool/main/i/i2c-tools/i2c-tools_3.1.0.orig.tar.bz2   # download i2c-tools source
 tar xf i2c-tools_3.1.0.orig.tar.bz2
 cd i2c-tools-3.1.0/py-smbus
 mv smbusmodule.c smbusmodule.c.orig  # backup
-wget https://gist.githubusercontent.com/sebastianludwig/c648a9e06c0dc2264fbd/raw/2b74f9e72bbdffe298ce02214be8ea1c20aa290f/smbusmodule.c 	# download patched (Python 3) source
+wget https://gist.githubusercontent.com/sebastianludwig/c648a9e06c0dc2264fbd/raw/2b74f9e72bbdffe298ce02214be8ea1c20aa290f/smbusmodule.c   # download patched (Python 3) source
 ```
 
 The next steps need to be run with Python 3.4. For me, this meant activating a virtual environment ([see previous post]({% post_url 2014-07-20-install-python34-on-raspberry-pi %})) - as root.
@@ -38,7 +38,7 @@ The next steps need to be run with Python 3.4. For me, this meant activating a v
 ```bash
 sudo bash
 source /home/pi/.virtualenvs/python34/bin/activate
-python --version 		# should output 'Python 3.4.1'
+python --version    # should output 'Python 3.4.1'
 
 python setup.py build
 python setup.py install

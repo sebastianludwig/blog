@@ -17,10 +17,10 @@ Create a backup of your SD card!
 
 ```bash
 sudo apt-get install rpi-update
-sudo rpi-update				# update the firmware
-sudo reboot					# reboot needed
-sudo apt-get update 		# update package information
-sudo apt-get dist-upgrade	# upgrade everything, resolving dependencies
+sudo rpi-update             # update the firmware
+sudo reboot                 # reboot needed
+sudo apt-get update         # update package information
+sudo apt-get dist-upgrade   # upgrade everything, resolving dependencies
 # now we should be up to date - yay
 
 # update pip
@@ -96,7 +96,7 @@ sudo apt-get install libbz2-1.0 libbz2-dev libffi5 libffi-dev libncursesw5 libnc
 
 ## Installation
 
-Head over to https://www.python.org/downloads/ and copy the link to the gzipped source tarball of the Python version you want to install. 3.4.1 was the latest version as of writing this.
+Head over to <https://www.python.org/downloads/> and copy the link to the gzipped source tarball of the Python version you want to install. 3.4.1 was the latest version as of writing this.
 
 ```bash
 # get the source
@@ -106,9 +106,9 @@ tar xvzf Python-3.4.1.tgz
 cd Python-3.4.1/
 
 # configure, make, make install
-./configure --prefix=/opt/python3.4 		# this takes a little bit (~ 5 minutes)
-make										# this takes aaages (about an hour)
-sudo make install 							# this is rather quick again (~ 7 minutes)
+./configure --prefix=/opt/python3.4     # this takes a little bit (~ 5 minutes)
+make                                    # this takes aaages (about an hour)
+sudo make install                       # this is rather quick again (~ 7 minutes)
 ```
 
 Add `source /usr/local/bin/virtualenvwrapper_lazy.sh` to your `~/.bashrc`.

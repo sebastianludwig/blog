@@ -157,10 +157,10 @@ This is probabably becasue I have Xcode installed and clang 12.0.0 fails the "is
 
 ```makefile
 #AM_CPPFLAGS = -I$(top_srcdir)/gnugetopt -I$(top_srcdir)/trio -I- -I. \
-#	      -I$(srcdir)  -I$(top_srcdir)/gsl/specfunc -I$(top_srcdir)
+#       -I$(srcdir)  -I$(top_srcdir)/gsl/specfunc -I$(top_srcdir)
 
 AM_CPPFLAGS = -iquote$(top_srcdir)/gnugetopt -iquote$(top_srcdir)/trio \
-	      -I$(srcdir)  -I$(top_srcdir)/gsl/specfunc -I$(top_srcdir)
+        -I$(srcdir)  -I$(top_srcdir)/gsl/specfunc -I$(top_srcdir)
 ```
 
 I also had to specify `LC_CTYPE` to make the tests pass

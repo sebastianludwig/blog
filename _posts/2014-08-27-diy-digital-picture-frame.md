@@ -62,9 +62,9 @@ The configuration steps were roughly:
 - Change hostname: `sudo nano /etc/hostname`
 - Update everything: `apt-get dist-upgrade`
 - Zeroconf aka Bonjour: `sudo apt-get install avahi-daemon` (&lt;hostname&gt;.local)
-- FileSharing (http://4dc5.com/2012/06/12/setting-up-vnc-on-raspberry-pi-for-mac-access/)
-  - edit: http://www.raspberrypi.org/forums/viewtopic.php?f=36&t=26826 & http://devel.datif.be/howto/serve-files-using-afp-with-netatalk-from-fedora-linux-to-mac-osx-leopard-clients/
-- WLAN: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf` (http://www.maketecheasier.com/setup-wifi-on-raspberry-pi/)
+- FileSharing (<http://4dc5.com/2012/06/12/setting-up-vnc-on-raspberry-pi-for-mac-access/>)
+  - edit: <http://www.raspberrypi.org/forums/viewtopic.php?f=36&t=26826 & http://devel.datif.be/howto/serve-files-using-afp-with-netatalk-from-fedora-linux-to-mac-osx-leopard-clients/>
+- WLAN: `sudo nano /etc/wpa_supplicant/wpa_supplicant.conf` (<http://www.maketecheasier.com/setup-wifi-on-raspberry-pi/>)
   - add:
 
         ```

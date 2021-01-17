@@ -77,8 +77,8 @@ The list what should be improved or could be done next is long. The prominent it
 - Find cloths that are easier to put on
 - Design a custom board with SMD components to shrink the worn hardware
 - Speed up Python + Protocol Buffers
-	- The C++ backed implementation should bring some improvements. I will try them over easter (if they are [released for Python 3.4](https://github.com/google/protobuf/issues/7) by then)
-	- The faster [Raspberry Pi 2](http://www.raspberrypi.org/products/raspberry-pi-2-model-b/) with a quad core could help
+  - The C++ backed implementation should bring some improvements. I will try them over easter (if they are [released for Python 3.4](https://github.com/google/protobuf/issues/7) by then)
+  - The faster [Raspberry Pi 2](http://www.raspberrypi.org/products/raspberry-pi-2-model-b/) with a quad core could help
 - Experiment with different actors - I'd _love_ to test the potential of electronic muscle stimulation!
 
 
