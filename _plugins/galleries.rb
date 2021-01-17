@@ -220,8 +220,12 @@ module Jekyll
  				name = File.join(file_directory, File.basename(file).sub(File.extname(file), "-thumb#{File.extname(file)}"))
  				thumbname = File.join(@gallery_full_dest, name)
 
-                # Keep the thumb files from being cleaned by Jekyll
-                site.static_files << Jekyll::GalleryFile.new(site, site.source, @gallery_dest + "/" + file_directory, File.basename(name))
+ 				# HINT
+ 				# Deactivated to get rid of "The following destination is shared by multiple files." warnings
+ 				# which showed up after updating to Jekyll 4.
+ 				# 
+ 				# Keep the thumb files from being cleaned by Jekyll
+ 				# site.static_files << Jekyll::GalleryFile.new(site, site.source, @gallery_dest + "/" + file_directory, File.basename(name))
 
  				if !File.exists?(thumbname)
  					to_resize.push({ "file" => file, "thumbname" => thumbname })
