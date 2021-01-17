@@ -4,17 +4,17 @@ email: sebastian@lurado.de
 description: "what I do, when I don't do, what I should do."
 baseurl: ""
 url: "https://procrastinative.ninja"
-highlighter: pygments
 
 timezone: Europe/Berlin
 
 # Build settings
-markdown: redcarpet
 permalink: pretty
 exclude: ['Gemfile', 'Gemfile.lock', 'TODO.txt', '*.psd']
 
-redcarpet:
-  extensions: ["smart", "tables", "autolink", "strikethrough", "superscript", "with_toc_data"]
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
 
 owner:
   name: Sebastian Ludwig

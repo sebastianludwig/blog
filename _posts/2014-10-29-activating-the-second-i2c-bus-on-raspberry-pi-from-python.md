@@ -117,7 +117,7 @@ def i2cConfig():
 if __name__ == '__main__':
     i2cConfig()
 ```
-Gist URL: https://gist.github.com/sebastianludwig/cd2f28cfd380383650fa
+Gist URL: <https://gist.github.com/sebastianludwig/cd2f28cfd380383650fa>
 
 To be honest, I'm not 100% sure about `configure_pull_up`, especially the byte order. It _seems_ to work... Please report any issues you might run into.
 
