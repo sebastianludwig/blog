@@ -11,7 +11,7 @@ I'm using a plain old IMAP mail provider and was long frustrated by the fact tha
 
 The centerpiece is [`imapfilter`](https://github.com/lefcha/imapfilter), a headless IMAP client with a simple but powerful rule engine in Lua. I wasn't completely satisified with the way it handles password entry and wanted a way to edit the rules conveniently in the browser. So I developed [a web UI](https://github.com/sebastianludwig/imapfilter-web-ui). The installation is (hopefully) described sufficiently in the readme. If it's not, please [open an issue](https://github.com/sebastianludwig/imapfilter-web-ui/issues).
 
-My configuration is basically a slightly customized version of the [exaple](https://github.com/sebastianludwig/imapfilter-web-ui/imapfilter-config.lua.example) in the repository.
+My configuration is basically a slightly customized version of the [example](https://github.com/sebastianludwig/imapfilter-web-ui/imapfilter-config.lua.example) in the repository.
 
 ## Bogofilter
 
@@ -23,7 +23,7 @@ To train `bogofilter` a corpus of mails is needed, the bigger the better. Luckil
 
 However it's no good on the server, it's needed locally and in the mbox format. Apple Mail can export mailboxes as mbox, but it failed on my multi GB _Archive_ mailbox.
 
-Buuut I'm using `mbsync` to periododically create local backups of my mails on my Mac. You can install it with `brew install isync` (yes, `isync`, not `mbsync`, because ["isync is the project name, mbsync is the current executable name"](https://isync.sourceforge.io)...). I have the following configuration in `~/.mbsyncrc` and the program can be run with `mbsync -a`.
+Buuut I'm using `mbsync` to periodically create local backups of my mails on my Mac. You can install it with `brew install isync` (yes, `isync`, not `mbsync`, because ["isync is the project name, mbsync is the current executable name"](https://isync.sourceforge.io)...). I have the following configuration in `~/.mbsyncrc` and the program can be run with `mbsync -a`.
 
 ```
 # Remote IMAP account
@@ -74,7 +74,7 @@ It could have been so easy...
 sudo apt-get install bogofilter
 ```
 
-but that only installs version 1.2.4 instead of the latest 1.2.5. Now, does that one patch version make such a big difference? Well, .4 is six _years_ older than .5. In the meantime a bunch of security and memory leak fixes accumulated and wanted to have those. So instead of a single `apt-get install` I built `bogofilter` from source.
+but that only installs version 1.2.4 instead of the latest 1.2.5. Now, does that one patch version make such a big difference? Well, .4 is six _years_ older than .5. In the meantime a bunch of security and memory leak fixes accumulated and I wanted to have those. So instead of a single `apt-get install` I built `bogofilter` from source.
 
 After downloading [1.2.5 from SourceForge](https://sourceforge.net/projects/bogofilter/files/bogofilter-stable/) and sending it over to the Pi
 
@@ -116,7 +116,7 @@ spam_cutoff = 0.85
 ...
 ```
 
-Bogofilter scores every mail on its spammyneess and it can operate in two-state (spam, not spam) or tri-state mode (spam, not spam and unsure). I want to use tri-state mode and the chosen the following thresholds to create three intervals
+Bogofilter scores every mail on its spammyness and it can operate in two-state (spam, not spam) or tri-state mode (spam, not spam and unsure). I want to use tri-state mode and the following thresholds to create three intervals
 
 - [0..0.6) - not spam
 - (0.6..0.85) - unsure
@@ -147,13 +147,13 @@ cd bogofilter-1.2.5
 ./configure --with-database=sqlite
 ```
 
-The frist attempt failed with
+The first attempt failed with
 
 ```bash
 clang: error: '-I-' not supported, please use -iquote instead
 ```
 
-This is probabably becasue I have Xcode installed and clang 12.0.0 fails the "is GCC4?" check in `configure.ac`. To fix this I modified `src/Makefile`
+This is probably because I have Xcode installed and clang 12.0.0 fails the "is GCC4?" check in `configure.ac`. To fix this I modified `src/Makefile`
 
 ```makefile
 #AM_CPPFLAGS = -I$(top_srcdir)/gnugetopt -I$(top_srcdir)/trio -I- -I. \
@@ -169,7 +169,7 @@ I also had to specify `LC_CTYPE` to make the tests pass
 LC_CTYPE=C make all check
 ```
 
-The actual training was perfromed with some error margins and slightly stricter values to gain some leeway for production. I used the script [`bogominitrain.pl`](https://gitlab.com/bogofilter/bogofilter/-/blob/main/bogofilter/contrib/bogominitrain.pl) and targeted a spam threshold of 0.95 and a non-spam threshold of 0.3.
+The actual training was performed with some error margins and slightly stricter values to gain some leeway for production. I used the script [`bogominitrain.pl`](https://gitlab.com/bogofilter/bogofilter/-/blob/main/bogofilter/contrib/bogominitrain.pl) and targeted a spam threshold of 0.95 and a non-spam threshold of 0.3.
 
 ```bash
 cd src
@@ -196,7 +196,7 @@ scp wordlist.db pi@<Pi IP>:/var/spool/bogofilter/
 
 ## Spam Filtering
 
-The algorithm for spam filtering which needs to be expressed in `impafilter` rules is
+The algorithm for spam filtering which needs to be expressed in `imapfilter` rules is
 
 - Let `bogofilter` evaluate every newly arrived message in the inbox:
   - If it is **not spam**, leave it alone and let the user handle it as usual.
@@ -345,7 +345,7 @@ end
 
 ## Final Thoughts
 
-Directly starting with the above code would learn every mail in the _Junk_ mailbox as spam - again - because it matches the false negatives search. And "again" because `bogofilter` already learned them in the training phase. To avid this every message needs the `bogofilter-junk` label. I ran the following helper method once before turning on junk filtering.
+Directly starting with the above code would learn every mail in the _Junk_ mailbox as spam - again - because it matches the false negatives search. And "again" because `bogofilter` already learned them in the training phase. To avoid this every message needs the `bogofilter-junk` label. I ran the following helper method once before turning on junk filtering.
 
 ```lua
 function setup_junk_filtering()
