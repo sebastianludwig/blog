@@ -247,10 +247,14 @@ inbox = my_account.INBOX
 junk_mailbox = my_account["Junk"]
 trash_mailbox = my_account["Trash"]
 
--- mark as spam so Apple Mail recognizes it as such
+-- mark as spam so macOS Mail recognizes it as such
 function mark_as_junk(messages)
   messages:remove_flags({'NotJunk', '$NotJunk'})
   messages:add_flags({'Junk', '$Junk'})
+end
+function mark_as_good(messages)
+  messages:remove_flags({'Junk', '$Junk'})
+  messages:add_flags({'NotJunk', '$NotJunk'})
 end
 
 function junk(messages)
@@ -288,6 +292,7 @@ function filter_junk()
     -- learn that it was not spam (-n)
     pipe_to('bogofilter -n', message:fetch_message())
   end
+  mark_as_good(unsure_negatives)
   unsure_negatives:remove_flags({ BOGOFILTER_UNSURE })
   unsure_negatives:unmark_flagged()
   unsure_negatives:remove_flags({ YELLOW_FLAG })
